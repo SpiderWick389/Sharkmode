@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0a2540, #000);
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOPO */
+.topo {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topo h1 {
+    letter-spacing: 3px;
+}
+
+/* TELAS */
+.tela {
+    display: none;
+    flex: 1;
+    padding: 20px;
+}
+
+.tela.ativa {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTAINER CENTRAL */
+.tela > * {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* FRASE */
+.frase {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+/* BOTÕES */
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #0a2540, #000);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+button:disabled {
+    background: linear-gradient(135deg, #111, #000);
+    opacity: 0.6;
+}
+
+/* TIPO TREINO */
+.tipo-treino {
+    display: flex;
+    justify-content: space-around; /* botões lado a lado */
+    gap: 10px;
+}
+
+/* LISTAS */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* INFO */
+.info p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* STATUS */
+.missao {
+    text-align: center;
+    margin-top: 10px;
+    color: #38bdf8;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: space-around; /* botões lado a lado */
+    align-items: center;           /* centraliza verticalmente */
+    padding: 12px 0;
+    background: rgba(0,0,0,0.8);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu button {
+    width: auto;       /* mantém os botões compactos */
+    padding: 10px 16px;
+    border-radius: 12px;
+}
+
+/* CALENDÁRIO */
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.calendario div {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    font-size: 12px;
+}
+
+/* MEDALHAS */
+#medalhasContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.medalha {
+    font-size: 24px;
+}
+
+.medalha.ultima {
+    font-size: 28px;
+    color: gold;
+}

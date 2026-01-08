@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SHARK MODE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <h1>SHARK MODE</h1>
+    <p id="contador"></p>
+</header>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="tela ativa">
+
+    <p id="fraseForja" class="frase"></p>
+
+    <!-- TIPO DE TREINO -->
+    <div class="card">
+        <div class="tipo-treino">
+            <label>
+                <input type="radio" name="tipo" value="academia" checked>
+                🏋️ Academia
+            </label>
+            <label>
+                <input type="radio" name="tipo" value="casa">
+                💪 Casa
+            </label>
+        </div>
+    </div>
+
+    <!-- EXERCÍCIOS -->
+    <div class="card">
+        <h3>Detalhes do treino</h3>
+
+        <input id="exercicio" type="text" placeholder="Exercício">
+        <input id="series" type="number" placeholder="Séries">
+        <input id="reps" type="number" placeholder="Repetições">
+
+        <button id="btnAddExercicio" type="button">
+            ➕ Adicionar exercício
+        </button>
+
+        <ul id="listaExercicios"></ul>
+    </div>
+
+    <!-- REGISTRAR TREINO -->
+    <div class="card">
+        <button id="btnTreino">Treinei hoje</button>
+        <p id="statusTreino"></p>
+    </div>
+
+    <!-- INFO -->
+    <div class="card info">
+        <p id="streak"></p>
+        <p id="recorde"></p>
+    </div>
+
+</section>
+
+<!-- HISTÓRICO -->
+<section id="historico" class="tela">
+    <h2>Histórico</h2>
+    <ul id="listaHistorico"></ul>
+
+    <div class="card">
+        <h3>Calendário</h3>
+        <div id="calendario" class="calendario"></div>
+    </div>
+</section>
+
+<!-- ESTATÍSTICAS -->
+<section id="estatisticas" class="tela">
+
+    <h2>Estatísticas</h2>
+
+    <div class="card info">
+        <p id="totalTreinos"></p>
+        <p id="treinosAcademia"></p>
+        <p id="treinosCasa"></p>
+        <p id="percentual"></p>
+    </div>
+
+    <div class="card">
+        <h3>Medalhas</h3>
+        <div id="medalhasContainer"></div>
+    </div>
+
+</section>
+
+<!-- MENU -->
+<nav class="menu">
+    <button onclick="mostrarTela('dashboard')">🏠</button>
+    <button onclick="mostrarTela('historico')">📅</button>
+    <button onclick="mostrarTela('estatisticas')">📊</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
+
